@@ -4,7 +4,13 @@ const cors = require("cors")
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors(
+    {
+        origin:["https://online-quiz-app-using-react-api.vercel.app/"],
+        methods:["POST", "GET"],
+        credentials: true
+    }
+))
 
 
 
