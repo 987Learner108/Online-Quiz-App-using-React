@@ -1,16 +1,12 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "*.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
     ]
   }
-  
+
+in index.js, add this:
+app.use(cors({
+  origin: "*",
+  methods: ["POST", "GET"],
+  credentials: true
+}));
