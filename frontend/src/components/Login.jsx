@@ -16,7 +16,7 @@ function Login() {
 
         try{
 
-            await axios.post("http://localhost:8888/",{
+            await axios.post("online-quiz-app-using-react-api.vercel.app",{
                 email,password
             })
             .then(res=>{
