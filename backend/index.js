@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors(
     {
-        origin:["https://online-quiz-app-using-react-e11h.vercel.app/"],
+        origin:["https://online-quiz-app-using-react-e11h.vercel.app"],
         methods:["POST", "GET"],
         credentials: true
     }
